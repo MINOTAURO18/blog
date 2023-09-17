@@ -1,5 +1,5 @@
 {
-  "name": "blog-jamy",
+  "name": "blog",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -11,6 +11,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@astrojs/vercel": "^5.0.0",
     "astro": "^3.1.0"
   },
   "devDependencies": {
