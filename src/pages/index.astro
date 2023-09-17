@@ -1,0 +1,112 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="home">
+  <section class="home">
+    <h1><span>G</span>UIA-<span>J</span>AMY <span>E</span>NCUENTRA <span>R</span>ECURSOS <span>D</span>E <span>P</span>ROGRAMACION</h1>
+    <p>
+      En Guia-JAMY puedes encontrar recursos de diferentes lenguajes y
+      tecnologias, el contenido de este sitio, son recursos como cursos, paginas
+      y documentacion, que yo JAMY creo que son de los mejores que puedes
+      encontrar en la red.
+    </p>
+    <div style="display: flex; gap: 25px; margin-top: 20px;">
+      <a class="button" href="#" style="display: flex; justify-content: center; align-items: center; gap: 5px; text-decoration: none;"
+        >portafolio<img src="/assets/youtube.svg" style="width: 25px; filter: invert(23%) sepia(91%) saturate(6645%) hue-rotate(356deg) brightness(106%) contrast(119%);" alt="" /></a
+      >
+      <a class="button" href="#" style="display: flex; justify-content: center; align-items: center; gap: 5px; text-decoration: none;"
+        >portafolio<img style="width: 25px; filter: invert(62%) sepia(47%) saturate(5205%) hue-rotate(229deg) brightness(102%) contrast(107%);" src="/assets/youtube.svg" alt="" /></a
+      >
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .home {
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10vh;
+  }
+
+  .home h1 {
+    text-align: center;
+    max-width: 900px;
+    font-size: 3.5rem;
+  }
+
+  .home p {
+    text-align: center;
+    max-width: 900px;
+    font-weight: 400;
+    font-size: 15px;
+  }
+  span{
+    color: rgb(98, 0, 255);
+  }
+
+  .button {
+    --color: #ffffff;
+    width: 120px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 0.3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 400;
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button::before,
+  .button::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+  }
+
+  .button::before {
+    top: -1em;
+    left: -1em;
+  }
+
+  .button::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+  }
+
+  .button:hover::before,
+  .button:hover::after {
+    height: 410px;
+    width: 410px;
+  }
+
+  .button:hover {
+    color: rgb(1, 22, 39);
+  }
+
+  .button:active {
+    filter: brightness(0.8);
+  }
+</style>

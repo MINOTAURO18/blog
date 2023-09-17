@@ -1,0 +1,142 @@
+---
+import Nav from "../components/Nav.astro";
+import menuItems from "../data/menuItemsData";
+import MenuItemView from "../components/MenuItemView.astro";
+import { ViewTransitions } from "astro:transitions";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <ViewTransitions/>
+    <title>{title}</title>
+  </head>
+  <body>
+    <article class="article">
+      <h1>JAMY</h1>
+      <span class="redes">
+        <a target="_blank" href="https://www.youtube.com/channel/UC2KuDBEK0LJ8ZMku3KnrHMw"><img src="images/youtube.svg" alt="" /></a>
+        <a target="_blank" href="https://github.com/MINOTAURO18"><img src="images/github.svg" alt="" /></a>
+        <a target="_blank" href="https://www.linkedin.com/in/alexander-mu%C3%B1oz-4959a0255/"><img src="images/linkedin.svg" alt="" /></a>
+      </span>
+    </article>
+    <Nav>
+      {menuItems.map((item) => <MenuItemView {...item} />)}
+    </Nav>
+    <slot />
+  </body>
+</html>
+<style is:global>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+  }
+
+  body {
+    color: white;
+    background: linear-gradient(45deg, #6121a5, #012433, rgb(46, 26, 117));
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+  }
+
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  html {
+    font-family: system-ui, sans-serif;
+    background-size: 224px;
+  }
+
+  p{
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  body {
+    padding: 1rem 0;
+    width: 90%;
+    margin: 0 auto;
+    min-height: 100vh;
+  }
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
+
+  .article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .redes img {
+    width: 20px;
+    filter: invert(100%) sepia(0%) saturate(4%) hue-rotate(160deg)
+      brightness(102%) contrast(106%);
+  }
+
+  .redes img:hover {
+    transform: translateY(-2px);
+    transition: all 0.2s ease;
+  }
+
+  body::-webkit-scrollbar{
+    width: 0;
+  }
+  
+  body::-webkit-scrollbar-thumb{
+    background-color: rgb(2, 0, 13);
+    border-radius: 10px;
+  }
+  
+  body::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(2, 0, 13);
+  }
+</style>

@@ -1,0 +1,19 @@
+{
+  "name": "blog-jamy",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "astro": "^3.1.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
+  }
+}
