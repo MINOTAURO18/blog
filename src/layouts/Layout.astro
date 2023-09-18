@@ -20,7 +20,7 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/blog/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <ViewTransitions/>
+    <ViewTransitions fallback="animate"/>
   </head>
   <body  >
     <article class="article">
