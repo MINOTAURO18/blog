@@ -32,7 +32,7 @@ const { title } = Astro.props;
       </span>
     </article>
     <Nav>
-      {menuItems.map((item) => <MenuItemView {...item} />)}
+      {menuItems.map((item) => <MenuItemView {...item} transition:name="alex" />)}
     </Nav>
     <slot />
   </body>
