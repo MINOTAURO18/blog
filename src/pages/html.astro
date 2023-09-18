@@ -3,17 +3,16 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="HTML">
-  <section class="section-css">
+  <section class="section-css" transition:animate="slide">
     <span>
       <img src="/blog/images/ht.svg" alt="html" />
       <h2>HTML</h2>
       <img src="/blog/images/arrow.svg" alt="arrow" />
     </span>
 
-    <article class="content">
+    <article class="content" >
       <span style="font-size: 20px; font-weight: 600;">Cursos</span>
-      <div class="cards" transition:name="alex"
-      style="view-transition-name: alex ;"
+      <div class="cards" 
       >
         <main
           class="card"
