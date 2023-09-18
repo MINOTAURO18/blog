@@ -23,7 +23,7 @@ const { title } = Astro.props;
     <ViewTransitions fallback="animate"/>
   </head>
   <body transition:animate="slide" >
-    <article class="article">
+    <article class="article" transition:animate='none'>
       <h1>JAMY</h1>
       <span class="redes">
         <a target="_blank" href="https://www.youtube.com/channel/UC2KuDBEK0LJ8ZMku3KnrHMw"><img src="/blog/images/youtube.svg" alt="" /></a>
@@ -32,7 +32,7 @@ const { title } = Astro.props;
       </span>
     </article >
     <Nav>
-      {menuItems.map((item) => <MenuItemView {...item}  />)}
+      {menuItems.map((item) => <MenuItemView {...item} />)}
     </Nav>
     <slot />
   </body>
