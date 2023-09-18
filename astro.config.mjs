@@ -6,4 +6,5 @@ export default defineConfig({
   viewTransitions: true,
   site: "https://MINOTAURO18.github.io",
   base: "/blog",
+  
 });
