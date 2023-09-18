@@ -457,4 +457,17 @@ import Layout from "../layouts/Layout.astro";
   .button:active {
     filter: brightness(0.8);
   }
+
+  @media (width < 340px) {
+    .card{
+      flex-direction: column;
+      height: auto;
+      padding-right: 0;
+    }
+
+    .card img{
+      border-radius: 4px 4px 0 0 !important;
+    }
+
+  }
 </style>
