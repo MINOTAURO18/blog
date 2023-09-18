@@ -4,7 +4,7 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="home">
   <section class="home">
-    <h1><span>G</span>UIA-<span>J</span>AMY <span>E</span>NCUENTRA <span>R</span>ECURSOS <span>D</span>E <span>P</span>ROGRAMACION</h1>
+    <h1><span>G</span>UIA-<span>J</span>AMY <span>E</span>NCUENTRA <span>R</span>ECURSOS <span>D</span>E <span>P</span>ROGRAMACIÓN</h1>
     <p>
       En Guia-JAMY puedes encontrar recursos de diferentes lenguajes y tecnologías, El contenido de este sitio solo son recursos como cursos, páginas y documentación, Que yo JAMY creo que son de los mejores que puedes encontrar en la red.
     </p>
@@ -105,5 +105,25 @@ import Layout from "../layouts/Layout.astro";
 
   .button:active {
     filter: brightness(0.8);
+  }
+
+  @media (width < 960px) {
+    .home h1{
+      font-size: 2rem;
+    }
+
+    .home p{
+      font-size: 12px;
+    }
+  }
+
+  @media (width < 570px){
+    .home h1{
+      font-size: 1.3rem;
+    }
+
+    .home p{
+      font-size: 11px;
+    }
   }
 </style>
