@@ -12,7 +12,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es" transition:animate="slide">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -31,7 +31,7 @@ const { title } = Astro.props;
         <a target="_blank" href="https://www.linkedin.com/in/alexander-mu%C3%B1oz-4959a0255/"><img src="/blog/images/linkedin.svg" alt="" /></a>
       </span>
     </article >
-    <Nav transition:animate='none'>
+    <Nav>
       {menuItems.map((item) => <MenuItemView {...item}  />)}
     </Nav>
     <slot />
