@@ -3,53 +3,53 @@ import type { MenuItem } from '../types/types';
 const menuItems: MenuItem[]  = [
     {
         title : 'Home',
-        url: '/blog',
+        url: '/',
         
         
     },
     {
         title : 'HTML',
-        url: '/blog/html',
+        url: '/html',
     },
     {
         title : 'CSS',
-        url: '/blog/css',
+        url: '/css',
     },
     {
         title : 'Tailwind',
-        url: '/blog/tailwind',
+        url: '/tailwind',
     },
     {
         title : 'Javascript',
-        url: '/blog/javascript',
+        url: '/javascript',
     },
     {
         title : 'React',
-        url: '/blog/react',
+        url: '/react',
     },
     {
         title : 'Typescript',
-        url: '/blog/typescript',
+        url: '/typescript',
     },
     {
         title : 'Python',
-        url: '/blog/python',
+        url: '/python',
     },
     {
         title : 'Node',
-        url: '/blog/node',
+        url: '/node',
     },
     {
         title : 'Express',
-        url: '/blog/express',
+        url: '/express',
     },
     {
         title : 'Mongo',
-        url: '/blog/mongo',
+        url: '/mongo',
     },
     {
         title : 'SQL',
-        url: '/blog/sql',
+        url: '/sql',
     },
     
 ]
