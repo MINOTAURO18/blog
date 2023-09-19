@@ -418,30 +418,7 @@ import Layout from "../layouts/Layout.astro";
     transition: all 0.2s ease-out;
   }
 
-  .cards .card{
-  view-timeline-name: --revealing-image;
-  view-timeline-axis: block;
-
-  animation-name: show;
-  animation-timing-function: ease;
-  animation-fill-mode: both;
-  animation-timeline: --revealing-image;
-
-  animation-range: entry 40% cover 25%;
-}
-
-@keyframes show {
-    from{
-        opacity: 0;
-        scale: 100%;
-    }
-
-    to{
-        opacity: 1;
-        scale: 100%;
-    }
-}
-
+ 
   span {
     display: flex;
     gap: 5px;
